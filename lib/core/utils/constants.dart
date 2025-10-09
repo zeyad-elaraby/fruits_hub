@@ -1,0 +1,1 @@
+const kIsOnBoardingCompleted = 'is_onboarding_completed';

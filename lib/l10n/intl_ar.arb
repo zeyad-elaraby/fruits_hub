@@ -1,0 +1,13 @@
+{
+    "login":"تسجيل دخول",
+    "email":"البريد الإلكتروني",
+    "password":"كلمة المرور",
+    "forgotPassword":"نسيت كلمة المرور؟",
+    "dontHaveAccount":"لا تمتلك حساب؟",
+    "createAccount":"قم بانشاء حساب",
+    "or":"او",
+    "signInWithGoogle":"تسجيل بواسطة جوجل",
+    "signInWithApple":"تسجيل بواسطة ابل",
+    "signInWithFacebook":"تسجيل بواسطة فيسبوك"
+    
+}
