@@ -8,5 +8,11 @@
     "or":"Or",
     "signInWithGoogle":"Sign in with Google",
     "signInWithApple":"Sign in with Apple",
-    "signInWithFacebook":"Sign in with Facebook"
+    "signInWithFacebook":"Sign in with Facebook",
+    "newAccount":"New Account",
+    "fullName":"Full Name",
+    "termsAndConditionsPrefix":"By creating an account, you agree to",
+    "termsAndConditionsSuffix":"our Terms and Conditions",
+    "createNewAccount":"Create New Account",
+    "haveAccount":"Already have an account?"
 }

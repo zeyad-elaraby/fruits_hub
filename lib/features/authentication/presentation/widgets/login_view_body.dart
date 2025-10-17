@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruits_hub/core/helper_functions/route_manager/app_routes.dart';
 import 'package:fruits_hub/core/utils/app_colors.dart';
 import 'package:fruits_hub/core/utils/app_images.dart';
 import 'package:fruits_hub/core/utils/app_strings.dart';
@@ -36,7 +37,7 @@ class LoginViewBody extends StatelessWidget {
               child: Text(
                 local.forgotPassword,
                 style: TextStyles.semibold13.copyWith(
-                  color: AppColors.colorGreen600,
+                  color: AppColors.lightPrimaryColor,
                 ),
               ),
             ),
@@ -49,12 +50,14 @@ class LoginViewBody extends StatelessWidget {
               Text(
                 local.dontHaveAccount,
                 style: TextStyles.semibold16.copyWith(
-                  color: AppColors.color949d9e,
+                  color: AppColors.color949D9E,
                 ),
               ),
               SizedBox(width: 2.w),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, AppRoutes.registerView);
+                },
                 child: Text(
                   local.createAccount,
                   style: TextStyles.semibold16.copyWith(

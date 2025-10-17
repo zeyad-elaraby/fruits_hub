@@ -11,7 +11,7 @@ class AppColors {
   static const Color colore6e9ea = Color(0xFFe6e9ea);
   static const Color colorf9fafa = Color(0xFFf9fafa);
   static const Color colorC9CECF = Color(0xFFC9CECF);
-  static const Color color949d9e = Color(0xFF949d9e);
   static const Color colorDCDEDE = Color(0xFFDCDEDE);
-  static final Color colorGreen600 = Colors.green[600]!;
+  static const Color lightPrimaryColor = Color(0xFF2D9F5D);
+  static const Color transparent = Colors.transparent;
 }
