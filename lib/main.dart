@@ -1,16 +1,24 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_hub/core/helper_functions/route_manager/app_routes.dart';
 import 'package:fruits_hub/core/helper_functions/route_manager/route_generator.dart';
-import 'package:fruits_hub/core/sevices/shared_preferences_singleton.dart';
+import 'package:fruits_hub/core/services/custom_bloc_observer.dart';
+import 'package:fruits_hub/core/services/service_locator.dart';
+import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_hub/core/utils/app_colors.dart';
+import 'package:fruits_hub/firebase_options.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Prefs.init();
+  Bloc.observer = MyBlocObserver();
 
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Prefs.init();
+  ServiceLocator().init();
   runApp(FriutsHub());
 }
 

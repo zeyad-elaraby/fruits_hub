@@ -8,6 +8,12 @@
     "or":"او",
     "signInWithGoogle":"تسجيل بواسطة جوجل",
     "signInWithApple":"تسجيل بواسطة ابل",
-    "signInWithFacebook":"تسجيل بواسطة فيسبوك"
+    "signInWithFacebook":"تسجيل بواسطة فيسبوك",
+    "newAccount":"حساب جديد",
+    "fullName":"الاسم كامل",
+    "termsAndConditionsPrefix":"من خلال إنشاء حساب ، فإنك توافق على",
+    "termsAndConditionsSuffix":"الشروط والأحكام الخاصة بنا",
+    "createNewAccount":"انشاء حساب جديد",
+    "haveAccount":"تمتلك حساب بالفعل؟"
     
 }
