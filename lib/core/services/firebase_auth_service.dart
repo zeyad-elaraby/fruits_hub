@@ -1,5 +1,10 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruits_hub/core/errors/exceptions.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseAuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -15,8 +20,18 @@ class FirebaseAuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      throw CustomException(message: _handleAuthException(e));
+      if (kDebugMode) {
+        log(
+          "exception in firebaseAuthService.createUserWithEmailAndPassword ${e.toString()} and code is ${e.code}",
+        );
+      }
+      throw CustomException(message: handleEmailAndPasswordAuthExceptions(e));
     } catch (e) {
+      if (kDebugMode) {
+        log(
+          "exception in firebaseAuthService.createUserWithEmailAndPassword ${e.toString()}",
+        );
+      }
       throw CustomException(message: e.toString());
     }
   }
@@ -29,8 +44,13 @@ class FirebaseAuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      throw CustomException(message: _handleAuthException(e));
+      throw CustomException(message: handleEmailAndPasswordAuthExceptions(e));
     } catch (e) {
+      if (kDebugMode) {
+        log(
+          "exception in firebaseAuthService.signInWithEmailAndPassword ${e.toString()} ",
+        );
+      }
       throw CustomException(
         message: 'An unexpected error occurred. Please try again.',
       );
@@ -41,7 +61,7 @@ class FirebaseAuthService {
     try {
       await _auth.signOut();
     } on FirebaseAuthException catch (e) {
-      throw CustomException(message: _handleAuthException(e));
+      throw CustomException(message: handleEmailAndPasswordAuthExceptions(e));
     } catch (e) {
       throw CustomException(message: 'Failed to sign out. Please try again.');
     }
@@ -51,7 +71,7 @@ class FirebaseAuthService {
     try {
       await _auth.sendPasswordResetEmail(email: email);
     } on FirebaseAuthException catch (e) {
-      throw CustomException(message: _handleAuthException(e));
+      throw CustomException(message: handleEmailAndPasswordAuthExceptions(e));
     } catch (e) {
       throw CustomException(
         message: 'Failed to send reset email. Please try again.',
@@ -63,7 +83,7 @@ class FirebaseAuthService {
     try {
       await _auth.currentUser?.delete();
     } on FirebaseAuthException catch (e) {
-      throw CustomException(message: _handleAuthException(e));
+      throw CustomException(message: handleEmailAndPasswordAuthExceptions(e));
     } catch (e) {
       throw CustomException(
         message: 'Failed to delete account. Please try again.',
@@ -71,8 +91,32 @@ class FirebaseAuthService {
     }
   }
 
+  Future<User> signInWithGoogle() async {
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+    final GoogleSignInAuthentication? googleAuth =
+        await googleUser?.authentication;
+
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth?.accessToken,
+      idToken: googleAuth?.idToken,
+    );
+
+    return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
+  }
+
+
+
+Future<User> signInWithFacebook() async {
+  final LoginResult loginResult = await FacebookAuth.instance.login();
+
+  final OAuthCredential facebookAuthCredential = FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
+
+  return (await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential)).user!;
+}
+
   /// Centralized exception handler for all Firebase Auth error codes
-  String _handleAuthException(FirebaseAuthException e) {
+  String handleEmailAndPasswordAuthExceptions(FirebaseAuthException e) {
     switch (e.code) {
       // Registration/Sign up errors
       case 'weak-password':
