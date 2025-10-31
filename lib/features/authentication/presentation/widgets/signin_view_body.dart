@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -120,12 +122,16 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               },
             ),
             SizedBox(height: 16.h),
-            SocialAuthButton(
-              title: local.signInWithApple,
-              svgPath: Assets.imagesAppleIcon,
-              onPressed: () {},
-            ),
-            SizedBox(height: 16.h),
+          Platform.isIOS ?  Column(
+              children: [
+                SocialAuthButton(
+                  title: local.signInWithApple,
+                  svgPath: Assets.imagesAppleIcon,
+                  onPressed: () {},
+                ),
+                SizedBox(height: 16.h),
+              ],
+            ): SizedBox.shrink(),
             SocialAuthButton(
               title: local.signInWithFacebook,
               svgPath: Assets.imagesFacebookIcon,
