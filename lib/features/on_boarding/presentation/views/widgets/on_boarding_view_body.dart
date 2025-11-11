@@ -64,7 +64,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             child: CustomElevatedButton(
               onPressed: () {
                 Prefs.setBool(kIsOnBoardingCompleted, true);
-                Navigator.pushReplacementNamed(context, AppRoutes.logInView);
+                Navigator.pushReplacementNamed(context, AppRoutes.signInView);
               },
               title: 'ابدأ الان',
             ),

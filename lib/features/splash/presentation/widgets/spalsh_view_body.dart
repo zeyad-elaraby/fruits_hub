@@ -41,10 +41,10 @@ class _SpalshViewBodyState extends State<SpalshViewBody> {
   }
 
   void excuteNavigation() {
-    bool isOnBoardingCompleted = Prefs.getBool(kIsOnBoardingCompleted)??false;
+    bool isOnBoardingCompleted = Prefs.getBool(kIsOnBoardingCompleted) ?? false;
     Future.delayed(const Duration(seconds: 2), () {
       if (isOnBoardingCompleted) {
-        Navigator.pushReplacementNamed(context, AppRoutes.logInView);
+        Navigator.pushReplacementNamed(context, AppRoutes.signInView);
       } else {
         Navigator.pushReplacementNamed(context, AppRoutes.onboardingView);
       }

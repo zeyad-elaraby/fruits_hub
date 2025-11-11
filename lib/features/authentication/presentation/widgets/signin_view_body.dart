@@ -91,7 +91,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 SizedBox(width: 2.w),
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, AppRoutes.registerView);
+                    Navigator.pushNamed(context, AppRoutes.signupView);
                   },
                   child: Text(
                     local.createAccount,
@@ -122,16 +122,18 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               },
             ),
             SizedBox(height: 16.h),
-          Platform.isIOS ?  Column(
-              children: [
-                SocialAuthButton(
-                  title: local.signInWithApple,
-                  svgPath: Assets.imagesAppleIcon,
-                  onPressed: () {},
-                ),
-                SizedBox(height: 16.h),
-              ],
-            ): SizedBox.shrink(),
+            Platform.isIOS
+                ? Column(
+                    children: [
+                      SocialAuthButton(
+                        title: local.signInWithApple,
+                        svgPath: Assets.imagesAppleIcon,
+                        onPressed: () {},
+                      ),
+                      SizedBox(height: 16.h),
+                    ],
+                  )
+                : SizedBox.shrink(),
             SocialAuthButton(
               title: local.signInWithFacebook,
               svgPath: Assets.imagesFacebookIcon,

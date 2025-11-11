@@ -118,6 +118,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   ),
                   TextSpan(text: " "),
                   TextSpan(
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () => Navigator.pop(context),
                     text: local.login,
                     style: TextStyles.semibold16.copyWith(
                       color: AppColors.primaryColor,
