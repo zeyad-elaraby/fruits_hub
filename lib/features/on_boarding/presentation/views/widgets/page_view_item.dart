@@ -51,7 +51,7 @@ class PageViewItem extends StatelessWidget {
 
                       Navigator.pushReplacementNamed(
                         context,
-                        AppRoutes.logInView,
+                        AppRoutes.signInView,
                       );
                     },
                     child: Text('تخط'),

@@ -12,9 +12,9 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => SplashView());
     case AppRoutes.onboardingView:
       return MaterialPageRoute(builder: (context) => OnBoardingView());
-    case AppRoutes.logInView:
+    case AppRoutes.signInView:
       return MaterialPageRoute(builder: (context) => SigninView());
-    case AppRoutes.registerView:
+    case AppRoutes.signupView:
       return MaterialPageRoute(builder: (context) => SignupView());
     default:
       return MaterialPageRoute(
