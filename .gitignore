@@ -1,45 +1,49 @@
 # Miscellaneous
-*.class
 *.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
-
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
+.packages
 .flutter-plugins
 .flutter-plugins-dependencies
 .pub-cache/
-.pub/
-/build/
+.dart_tool/
+build/
+*.metadata
+*.lock
 
-# Symbolication related
-app.*.symbols
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.hprof
+*.pid
 
-# Obfuscation related
-app.*.map.json
+# iOS
+ios/Pods/
+ios/Podfile.lock
+ios/.symlinks/
+ios/Flutter/
+ios/Runner.xcworkspace/
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# Android
+android/.gradle/
+android/local.properties
+android/app/build/
+.gradle/
+
+# macOS
+macos/Pods/
+macos/Podfile.lock
+macos/.symlinks/
+macos/Flutter/
+macos/Runner.xcworkspace/
+
+# Linux
+linux/.config/
+linux/flutter/
+linux/.symlinks/
+
+# Windows
+windows/flutter/
+windows/.symlinks/
+windows/runner/Debug/
+windows/runner/Profile/
+windows/runner/Release/
