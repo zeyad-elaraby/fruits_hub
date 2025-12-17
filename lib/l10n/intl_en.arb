@@ -14,5 +14,11 @@
     "termsAndConditionsPrefix":"By creating an account, you agree to",
     "termsAndConditionsSuffix":"our Terms and Conditions",
     "createNewAccount":"Create New Account",
-    "haveAccount":"Already have an account?"
+    "haveAccount":"Already have an account?",
+    "goodMorning":"Good Morning !..",
+    "searchAbout":"Search about.......",
+    "bestSelling":"Best Selling",
+    "more":"More"
+
+
 }

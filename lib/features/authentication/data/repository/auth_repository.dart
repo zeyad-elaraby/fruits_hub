@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
@@ -6,7 +7,9 @@ import 'package:fruits_hub/core/errors/exceptions.dart';
 import 'package:fruits_hub/core/errors/failures.dart';
 import 'package:fruits_hub/core/services/database_service.dart';
 import 'package:fruits_hub/core/services/firebase_auth_service.dart';
+import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_hub/core/utils/backend_endpoints.dart';
+import 'package:fruits_hub/core/utils/constants.dart';
 import 'package:fruits_hub/features/authentication/data/models/user_model.dart';
 import 'package:fruits_hub/features/authentication/domain/entities/user_entity.dart';
 import 'package:fruits_hub/features/authentication/domain/repository/base_auth_repository.dart';
@@ -64,6 +67,8 @@ class AuthRepository extends BaseAuthRepository {
         password.trim(),
       );
       UserEntity userEntity = await getUserData(uId: user.uid);
+      await cacheUserData(userEntity);
+
       return Right(userEntity);
     } on CustomException catch (exception) {
       log(
@@ -89,6 +94,7 @@ class AuthRepository extends BaseAuthRepository {
         path: BackendEndpoints.checkIfUserExists,
         documentId: user.uid,
       );
+      await cacheUserData(userEntity);
 
       if (userExists) {
         await getUserData(uId: user.uid);
@@ -114,6 +120,7 @@ class AuthRepository extends BaseAuthRepository {
         path: BackendEndpoints.checkIfUserExists,
         documentId: user.uid,
       );
+      await cacheUserData(userEntity);
 
       if (userExists) {
         await getUserData(uId: user.uid);
@@ -157,5 +164,12 @@ class AuthRepository extends BaseAuthRepository {
       documentId: uId,
     );
     return UserModel.fromJson(userData);
+  }
+
+  @override
+  Future<void> cacheUserData(UserEntity user) async {
+    String userJson = jsonEncode(UserModel.fromEntity(user).toJson());
+    Prefs.setString(kUserData, userJson);
+    print('User data cached successfully' + userJson);
   }
 }

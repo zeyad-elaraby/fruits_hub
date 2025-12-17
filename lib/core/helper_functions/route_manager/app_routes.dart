@@ -3,4 +3,6 @@ class AppRoutes {
   static const String onboardingView = 'onboarding_view';
   static const String signInView = 'signin_view';
   static const String signupView = 'signup_view';
+  static const String homeView = 'home_view';
+  static const String bestSellingView = 'best_selling_view';
 }

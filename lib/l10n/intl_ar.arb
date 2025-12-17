@@ -14,6 +14,9 @@
     "termsAndConditionsPrefix":"من خلال إنشاء حساب ، فإنك توافق على",
     "termsAndConditionsSuffix":"الشروط والأحكام الخاصة بنا",
     "createNewAccount":"انشاء حساب جديد",
-    "haveAccount":"تمتلك حساب بالفعل؟"
-    
+    "haveAccount":"تمتلك حساب بالفعل؟",
+    "goodMorning":"صباح الخير !..",
+    "searchAbout":"ابحث عن.......",
+    "bestSelling":"الأكثر مبيعًا",
+    "more":"المزيد"    
 }

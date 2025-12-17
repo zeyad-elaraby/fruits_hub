@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub/core/services/service_locator.dart';
-import 'package:fruits_hub/core/widgets/custom_app_bar.dart';
+import 'package:fruits_hub/features/authentication/presentation/widgets/custom_auth_app_bar.dart';
 import 'package:fruits_hub/features/authentication/presentation/cubits/signup_cubit/signup_cubit.dart';
 import 'package:fruits_hub/features/authentication/presentation/cubits/signup_cubit/signup_state.dart';
 import 'package:fruits_hub/features/authentication/presentation/widgets/signup_view_body.dart';
@@ -16,7 +16,7 @@ class SignupView extends StatelessWidget {
     return BlocProvider(
       create: (context) => sl<SignupCubit>(),
       child: Scaffold(
-        appBar: CustomAppBar(title: S.of(context).newAccount),
+        appBar: CustomAuthAppBar(title: S.of(context).newAccount),
         body: SignupViewBodyBlocConsumer(),
       ),
     );

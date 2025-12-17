@@ -1,9 +1,14 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruits_hub/core/errors/exceptions.dart';
+import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
+import 'package:fruits_hub/core/utils/constants.dart';
+import 'package:fruits_hub/features/authentication/data/models/user_model.dart';
+import 'package:fruits_hub/features/authentication/domain/entities/user_entity.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseAuthService {
@@ -105,15 +110,31 @@ class FirebaseAuthService {
     return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
   }
 
+  Future<User> signInWithFacebook() async {
+    final LoginResult loginResult = await FacebookAuth.instance.login();
 
+    final OAuthCredential facebookAuthCredential =
+        FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
 
-Future<User> signInWithFacebook() async {
-  final LoginResult loginResult = await FacebookAuth.instance.login();
+    return (await FirebaseAuth.instance.signInWithCredential(
+      facebookAuthCredential,
+    )).user!;
+  }
 
-  final OAuthCredential facebookAuthCredential = FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
+  bool isLoggedIn() {
+    final hasCurrentUser = _auth.currentUser != null;
 
-  return (await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential)).user!;
-}
+    final hasUserData = Prefs.getString(kUserData) != null;
+
+    return hasCurrentUser && hasUserData;
+  }
+
+  getUserData() {
+    String? jsonString = Prefs.getString(kUserData);
+    var userJsonData = jsonDecode(jsonString ?? "");
+    UserEntity userData = UserModel.fromJson(userJsonData);
+    return userData;
+  }
 
   /// Centralized exception handler for all Firebase Auth error codes
   String handleEmailAndPasswordAuthExceptions(FirebaseAuthException e) {
