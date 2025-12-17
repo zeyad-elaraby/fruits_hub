@@ -16,5 +16,6 @@ abstract class BaseAuthRepository {
   Future<Either<Failure, UserEntity>> signInWithFacebook();
   Future addUserData(UserEntity user);
     Future<UserEntity> getUserData({required String uId});
+  Future cacheUserData(UserEntity user);
 
 }

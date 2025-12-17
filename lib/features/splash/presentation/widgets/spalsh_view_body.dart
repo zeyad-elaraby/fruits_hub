@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_hub/core/helper_functions/route_manager/app_routes.dart';
+import 'package:fruits_hub/core/services/firebase_auth_service.dart';
+import 'package:fruits_hub/core/services/service_locator.dart';
 import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_hub/core/utils/app_images.dart';
 import 'package:fruits_hub/core/utils/constants.dart';
@@ -42,9 +44,14 @@ class _SpalshViewBodyState extends State<SpalshViewBody> {
 
   void excuteNavigation() {
     bool isOnBoardingCompleted = Prefs.getBool(kIsOnBoardingCompleted) ?? false;
+    bool isUserLoggedIn = sl<FirebaseAuthService>().isLoggedIn();
     Future.delayed(const Duration(seconds: 2), () {
       if (isOnBoardingCompleted) {
-        Navigator.pushReplacementNamed(context, AppRoutes.signInView);
+        if (isUserLoggedIn) {
+          Navigator.pushReplacementNamed(context, AppRoutes.homeView);
+        } else {
+          Navigator.pushReplacementNamed(context, AppRoutes.signInView);
+        }
       } else {
         Navigator.pushReplacementNamed(context, AppRoutes.onboardingView);
       }

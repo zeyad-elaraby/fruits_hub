@@ -22,17 +22,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
     "createAccount": MessageLookupByLibrary.simpleMessage("قم بانشاء حساب"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
+    "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
     "haveAccount": MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+    "more": MessageLookupByLibrary.simpleMessage("المزيد"),
     "newAccount": MessageLookupByLibrary.simpleMessage("حساب جديد"),
     "or": MessageLookupByLibrary.simpleMessage("او"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "searchAbout": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
     "signInWithApple": MessageLookupByLibrary.simpleMessage("تسجيل بواسطة ابل"),
     "signInWithFacebook": MessageLookupByLibrary.simpleMessage(
       "تسجيل بواسطة فيسبوك",

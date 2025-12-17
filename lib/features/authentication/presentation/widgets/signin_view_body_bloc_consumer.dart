@@ -1,6 +1,7 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_hub/core/helper_functions/route_manager/app_routes.dart';
 import 'package:fruits_hub/core/widgets/custom_snack_bar.dart';
 import 'package:fruits_hub/features/authentication/presentation/cubits/signin_cubit/cubit/signin_cubit.dart';
 import 'package:fruits_hub/features/authentication/presentation/cubits/signin_cubit/cubit/signin_state.dart';
@@ -15,6 +16,7 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<SigninCubit, SigninState>(
       listener: (context, state) {
         if (state is SigninSuccess) {
+          Navigator.pushReplacementNamed(context, AppRoutes.homeView);
           customSnackBar(
             context: context,
             title: 'Success',

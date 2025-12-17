@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub/core/services/service_locator.dart';
 import 'package:fruits_hub/core/utils/app_strings.dart';
 import 'package:fruits_hub/core/utils/app_text_styles.dart';
-import 'package:fruits_hub/core/widgets/custom_app_bar.dart';
+import 'package:fruits_hub/features/authentication/presentation/widgets/custom_auth_app_bar.dart';
 import 'package:fruits_hub/features/authentication/presentation/cubits/signin_cubit/cubit/signin_cubit.dart';
 import 'package:fruits_hub/features/authentication/presentation/cubits/signin_cubit/cubit/signin_state.dart';
 import 'package:fruits_hub/features/authentication/presentation/widgets/signin_view_body.dart';
@@ -16,7 +16,7 @@ class SigninView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: S.of(context).login),
+      appBar: CustomAuthAppBar(title: S.of(context).login),
       body: BlocProvider(
         create: (context) => sl<SigninCubit>(),
         child: SigninViewBodyBlocConsumer(),
