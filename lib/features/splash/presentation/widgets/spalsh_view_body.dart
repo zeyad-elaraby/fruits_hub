@@ -48,7 +48,7 @@ class _SpalshViewBodyState extends State<SpalshViewBody> {
     Future.delayed(const Duration(seconds: 2), () {
       if (isOnBoardingCompleted) {
         if (isUserLoggedIn) {
-          Navigator.pushReplacementNamed(context, AppRoutes.homeView);
+          Navigator.pushReplacementNamed(context, AppRoutes.mainView);
         } else {
           Navigator.pushReplacementNamed(context, AppRoutes.signInView);
         }
