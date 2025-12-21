@@ -16,7 +16,7 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<SigninCubit, SigninState>(
       listener: (context, state) {
         if (state is SigninSuccess) {
-          Navigator.pushReplacementNamed(context, AppRoutes.homeView);
+          Navigator.pushReplacementNamed(context, AppRoutes.mainView);
           customSnackBar(
             context: context,
             title: 'Success',

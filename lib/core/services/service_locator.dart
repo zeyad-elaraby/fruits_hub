@@ -1,3 +1,6 @@
+import 'package:fruits_hub/core/data/repos/products_repository.dart';
+import 'package:fruits_hub/core/domain/repos/base_products_repository.dart';
+import 'package:fruits_hub/core/presentation/controllers/products_cubit/products_cubit.dart';
 import 'package:fruits_hub/core/services/database_service.dart';
 import 'package:fruits_hub/core/services/firebase_auth_service.dart';
 import 'package:fruits_hub/core/services/firestore_service.dart';
@@ -14,14 +17,18 @@ class ServiceLocator {
     ///cubit
     sl.registerFactory(() => SignupCubit(sl()));
     sl.registerFactory(() => SigninCubit(sl()));
+    sl.registerFactory(() => ProductsCubit(sl()));
 
     //REPOSITORY
     sl.registerLazySingleton<BaseAuthRepository>(
       () => AuthRepository(sl(), sl()),
     );
+    sl.registerLazySingleton<BaseProductsRepository>(
+      () => ProductsRepository(sl()),
+    );
 
     //services
     sl.registerLazySingleton<FirebaseAuthService>(() => FirebaseAuthService());
-  sl.registerLazySingleton<DatabaseService>(() => FirestoreService());
+    sl.registerLazySingleton<DatabaseService>(() => FirestoreService());
   }
 }
