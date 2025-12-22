@@ -45,6 +45,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             flex: selectedIndex == index ? 3 : 2,
 
             child: InkWell(
+              radius: 100.r,
               onTap: () {
                 setState(() {
                   selectedIndex = index;

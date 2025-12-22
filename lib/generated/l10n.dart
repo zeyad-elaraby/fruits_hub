@@ -218,6 +218,16 @@ class S {
   String get more {
     return Intl.message('More', name: 'more', desc: '', args: []);
   }
+
+  /// `Results`
+  String get results {
+    return Intl.message('Results', name: 'results', desc: '', args: []);
+  }
+
+  /// `Products`
+  String get products {
+    return Intl.message('Products', name: 'products', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

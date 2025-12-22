@@ -42,6 +42,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "newAccount": MessageLookupByLibrary.simpleMessage("New Account"),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "products": MessageLookupByLibrary.simpleMessage("Products"),
+    "results": MessageLookupByLibrary.simpleMessage("Results"),
     "searchAbout": MessageLookupByLibrary.simpleMessage("Search about......."),
     "signInWithApple": MessageLookupByLibrary.simpleMessage(
       "Sign in with Apple",

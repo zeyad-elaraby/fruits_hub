@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_hub/core/domain/entity/product_entity.dart';
 import 'package:fruits_hub/core/widgets/best_selling_item.dart';
 
-class HomeBestSellingGridView extends StatelessWidget {
-  const HomeBestSellingGridView({super.key, required this.products});
+class ProductsGridView extends StatelessWidget {
+  const ProductsGridView({super.key, required this.products});
 
   final List<ProductEntity> products;
   @override
