@@ -6,6 +6,9 @@ class InActiveItem extends StatelessWidget {
   final String image;
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(image);
+    return SizedBox(
+      height: double.infinity,
+      child: SvgPicture.asset(image, fit: BoxFit.scaleDown),
+    );
   }
 }

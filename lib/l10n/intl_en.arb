@@ -18,7 +18,9 @@
     "goodMorning":"Good Morning !..",
     "searchAbout":"Search about.......",
     "bestSelling":"Best Selling",
-    "more":"More"
+    "more":"More",
+    "results":"Results",
+    "products":"Products"
 
 
 }

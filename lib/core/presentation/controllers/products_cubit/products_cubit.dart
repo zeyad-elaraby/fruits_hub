@@ -5,14 +5,16 @@ import 'package:fruits_hub/core/presentation/controllers/products_cubit/products
 class ProductsCubit extends Cubit<ProductsState> {
   BaseProductsRepository baseProductsRepo;
   ProductsCubit(this.baseProductsRepo) : super(ProductsInitial());
-
+  int productsLength = 0;
   void getProducts() async {
     emit(ProductsLoading());
     var result = await baseProductsRepo.getProducts();
-    result.fold(
-      (failure) => emit(ProductsFailure(message: failure.message)),
-      (products) => emit(ProductsSuccess(products: products)),
-    );
+    result.fold((failure) => emit(ProductsFailure(message: failure.message)), (
+      products,
+    ) {
+      productsLength = products.length;
+      emit(ProductsSuccess(products: products));
+    });
   }
 
   void getBestSellingProducts() async {
