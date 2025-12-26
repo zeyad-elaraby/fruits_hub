@@ -7,7 +7,7 @@ class ProductModel {
   final String name;
   final String code;
   final String description;
-  final String price;
+  final num price;
   final bool isFeatured;
   String? imageUrl;
   final int expiratioMonths;

@@ -228,6 +228,11 @@ class S {
   String get products {
     return Intl.message('Products', name: 'products', desc: '', args: []);
   }
+
+  /// `Cart`
+  String get cart {
+    return Intl.message('Cart', name: 'cart', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

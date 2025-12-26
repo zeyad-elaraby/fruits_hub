@@ -11,6 +11,7 @@ import 'package:fruits_hub/core/services/custom_bloc_observer.dart';
 import 'package:fruits_hub/core/services/service_locator.dart';
 import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_hub/core/utils/app_colors.dart';
+import 'package:fruits_hub/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
 import 'package:fruits_hub/firebase_options.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
@@ -40,24 +41,27 @@ class FriutsHub extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (context, child) => MaterialApp(
-        theme: ThemeData(
-          fontFamily: 'Cairo',
-          scaffoldBackgroundColor: AppColors.whiteColor,
-          appBarTheme: AppBarTheme(backgroundColor: AppColors.whiteColor),
-        ),
-        locale: const Locale('ar'),
-        localizationsDelegates: [
-          S.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: S.delegate.supportedLocales,
+      builder: (context, child) => BlocProvider(
+        create: (context) => sl<CartCubit>(),
+        child: MaterialApp(
+          theme: ThemeData(
+            fontFamily: 'Cairo',
+            scaffoldBackgroundColor: AppColors.whiteColor,
+            appBarTheme: AppBarTheme(backgroundColor: AppColors.whiteColor),
+          ),
+          locale: const Locale('ar'),
+          localizationsDelegates: [
+            S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
 
-        debugShowCheckedModeBanner: false,
-        initialRoute: AppRoutes.splashView,
-        onGenerateRoute: (settings) => onGenerateRoutes(settings),
+          debugShowCheckedModeBanner: false,
+          initialRoute: AppRoutes.splashView,
+          onGenerateRoute: (settings) => onGenerateRoutes(settings),
+        ),
       ),
     );
   }

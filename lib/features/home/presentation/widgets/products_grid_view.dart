@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_hub/core/domain/entity/product_entity.dart';
-import 'package:fruits_hub/core/widgets/best_selling_item.dart';
+import 'package:fruits_hub/core/widgets/fruit_item.dart';
 
 class ProductsGridView extends StatelessWidget {
   const ProductsGridView({super.key, required this.products});
@@ -18,7 +18,7 @@ class ProductsGridView extends StatelessWidget {
       ),
       itemCount: products.length,
       itemBuilder: (context, index) =>
-          BestSellingItem(productEntity: products[index]),
+          FruitItem(productEntity: products[index]),
     );
   }
 }

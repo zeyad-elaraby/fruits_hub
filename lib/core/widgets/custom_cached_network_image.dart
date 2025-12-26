@@ -11,7 +11,7 @@ class CustomCachedNetworkImage extends StatelessWidget {
     required this.imageUrl,
     this.circle = false,
     this.borderRadius = 8,
-    this.boxFit = BoxFit.fill,
+    this.boxFit = BoxFit.cover,
   });
 
   final double? width;

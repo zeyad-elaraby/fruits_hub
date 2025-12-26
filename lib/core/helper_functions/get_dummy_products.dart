@@ -3,7 +3,7 @@ import 'package:fruits_hub/core/domain/entity/product_entity.dart';
 getDummyProduct() {
   return ProductEntity(
     name: 'Product 1',
-    price: "20",
+    price: 20,
     description: 'Description 1',
     code: 'Code 1',
     expiratioMonths: 1,
