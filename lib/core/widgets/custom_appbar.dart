@@ -10,9 +10,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     super.key,
     required this.title,
     this.isBackButton = true,
+    this.showNotification = true,
   });
   final String title;
   final bool isBackButton;
+  final bool showNotification;
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -47,12 +49,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             )
           : null,
-      actions: [
-        Padding(
-          padding: EdgeInsetsDirectional.only(end: 16.w),
-          child: NotificationWidget(),
-        ),
-      ],
+      actions: showNotification
+          ? [
+              Padding(
+                padding: EdgeInsetsDirectional.only(end: 16.w),
+                child: NotificationWidget(),
+              ),
+            ]
+          : null,
     );
   }
 

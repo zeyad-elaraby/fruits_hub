@@ -10,6 +10,7 @@ void customSnackBar({
 }) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
+      duration: const Duration(milliseconds: 600),
       elevation: 0,
       behavior: SnackBarBehavior.floating,
       backgroundColor: AppColors.transparent,
