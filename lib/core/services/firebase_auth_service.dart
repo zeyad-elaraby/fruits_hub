@@ -129,13 +129,6 @@ class FirebaseAuthService {
     return hasCurrentUser && hasUserData;
   }
 
-  getUserData() {
-    String? jsonString = Prefs.getString(kUserData);
-    var userJsonData = jsonDecode(jsonString ?? "");
-    UserEntity userData = UserModel.fromJson(userJsonData);
-    return userData;
-  }
-
   /// Centralized exception handler for all Firebase Auth error codes
   String handleEmailAndPasswordAuthExceptions(FirebaseAuthException e) {
     switch (e.code) {

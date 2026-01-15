@@ -14,9 +14,9 @@ class OnBoardingPageView extends StatelessWidget {
       controller: pageController,
       children: [
         PageViewItem(
-          isVisible:true,
-              // (pageController.hasClients ? pageController.page!.round() : 0) ==
-              // 0,
+          isVisible: true,
+          // (pageController.hasClients ? pageController.page!.round() : 0) ==
+          // 0,
           image: Assets.imagesPageViewItem1Image,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -41,9 +41,9 @@ class OnBoardingPageView extends StatelessWidget {
           background: Assets.imagesPageViewItem1Background,
         ),
         PageViewItem(
-          isVisible:false,
-              // (pageController.hasClients ? pageController.page!.round() : 0) ==
-              // 0,
+          isVisible: false,
+          // (pageController.hasClients ? pageController.page!.round() : 0) ==
+          // 0,
           image: Assets.imagesPageViewItem2Image,
           title: Text("ابحث وتسوق", style: TextStyles.bold23),
           subTitle:

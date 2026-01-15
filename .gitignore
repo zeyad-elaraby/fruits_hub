@@ -47,3 +47,6 @@ windows/.symlinks/
 windows/runner/Debug/
 windows/runner/Profile/
 windows/runner/Release/
+
+# others
+lib/core/utils/app_keys.dart

@@ -1,14 +1,12 @@
-
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/features/cart/presentation/views/cart_view.dart';
+import 'package:fruits_hub/features/checkout/presentation/views/checkout_view.dart';
 import 'package:fruits_hub/features/home/presentation/views/home_view.dart';
 import 'package:fruits_hub/features/products/presentation/views/products_view.dart';
 
 class MainViewBody extends StatelessWidget {
-  const MainViewBody({
-    super.key,
-    required int currentIndex,
-  }) : _currentIndex = currentIndex;
+  const MainViewBody({super.key, required int currentIndex})
+    : _currentIndex = currentIndex;
 
   final int _currentIndex;
 

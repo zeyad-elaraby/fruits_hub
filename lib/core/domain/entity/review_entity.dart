@@ -1,4 +1,3 @@
-
 class ReviewEntity {
   final String name;
   final String image;

@@ -13,12 +13,14 @@ import 'package:fruits_hub/features/cart/presentation/cubits/cart_cubit/cart_cub
 import 'package:fruits_hub/features/cart/presentation/cubits/cart_item_cubit/cart_item_cubit.dart';
 import 'package:fruits_hub/features/cart/presentation/cubits/cart_item_cubit/cart_item_state.dart';
 import 'package:fruits_hub/features/cart/presentation/widgets/cart_item_action_buttons.dart';
+import 'package:fruits_hub/generated/l10n.dart';
 
 class CartItem extends StatelessWidget {
   const CartItem({super.key, required this.cartItemEntity});
   final CartItemEntity cartItemEntity;
   @override
   Widget build(BuildContext context) {
+    var locale = S.of(context);
     return BlocBuilder<CartItemCubit, CartItemState>(
       buildWhen: (previous, current) {
         if (current is CartItemUpdated) {
@@ -73,7 +75,7 @@ class CartItem extends StatelessWidget {
                         bottom: 12.h,
                       ),
                       child: Text(
-                        "${cartItemEntity.calculateTotalUnitAmount()} كيلو",
+                        "${locale.weightInKilos(cartItemEntity.calculateTotalUnitAmount())}",
                         textAlign: TextAlign.right,
                         style: TextStyles.regular13.copyWith(
                           color: AppColors.colorF4A91F,
@@ -85,7 +87,7 @@ class CartItem extends StatelessWidget {
                       children: [
                         CartItemActionButtons(cartItem: cartItemEntity),
                         Text(
-                          "${cartItemEntity.calculateTotalPrice()} جنيه ",
+                          "${cartItemEntity.calculateTotalPrice()} ${locale.egPound} ",
                           style: TextStyles.bold16.copyWith(
                             color: AppColors.colorF4A91F,
                           ),

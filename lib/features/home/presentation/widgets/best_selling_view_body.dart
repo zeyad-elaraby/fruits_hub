@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_hub/core/presentation/controllers/products_cubit/products_cubit.dart';
 import 'package:fruits_hub/core/utils/app_text_styles.dart';
 import 'package:fruits_hub/features/home/presentation/widgets/products_grid_view_bloc_builder.dart';
+import 'package:fruits_hub/generated/l10n.dart';
 
 class BestSellingViewBody extends StatefulWidget {
   const BestSellingViewBody({super.key});
@@ -31,7 +32,7 @@ class _BestSellingViewBodyState extends State<BestSellingViewBody> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 24.h),
-                Text('الأكثر مبيعًا', style: TextStyles.bold16),
+                Text(S.of(context).bestSelling, style: TextStyles.bold16),
                 SizedBox(height: 8.h),
               ],
             ),

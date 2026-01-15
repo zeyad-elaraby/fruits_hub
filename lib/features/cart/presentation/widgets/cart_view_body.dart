@@ -36,7 +36,9 @@ class CartViewBody extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     decoration: BoxDecoration(color: AppColors.colorEBF9F1),
                     child: Text(
-                      'لديك ${context.watch<CartCubit>().cartEntity.cartItems.length} منتجات في سله التسوق',
+                      locale.productsInCart(
+                        context.watch<CartCubit>().cartEntity.cartItems.length,
+                      ),
                       style: TextStyles.regular13.copyWith(
                         color: AppColors.primaryColor,
                       ),

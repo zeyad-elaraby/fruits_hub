@@ -31,7 +31,7 @@ class ReviewModel {
     reviewDescription: json['reviewDescription'],
   );
 
- ReviewEntity toEntity() {
+  ReviewEntity toEntity() {
     return ReviewEntity(
       name: name,
       image: image,

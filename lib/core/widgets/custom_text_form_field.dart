@@ -6,7 +6,7 @@ import 'package:fruits_hub/core/utils/app_images.dart';
 import 'package:fruits_hub/core/utils/app_text_styles.dart';
 
 class CustomTextField extends StatefulWidget {
-  CustomTextField({
+  const CustomTextField({
     super.key,
     this.label,
     this.borderRadius,
@@ -25,6 +25,7 @@ class CustomTextField extends StatefulWidget {
     this.hintStyle,
     this.focusNode,
     this.nextFocus,
+    this.onSaved,
   });
   final String? label;
   final double? borderRadius;
@@ -43,6 +44,7 @@ class CustomTextField extends StatefulWidget {
   final TextStyle? hintStyle;
   final FocusNode? focusNode;
   final FocusNode? nextFocus;
+  final void Function(String?)? onSaved;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -72,6 +74,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           obscureText: hidden,
           obscuringCharacter: '*',
           validator: widget.validator,
+          onSaved: widget.onSaved,
           focusNode: widget.focusNode,
           onEditingComplete: () {
             widget.focusNode?.unfocus();

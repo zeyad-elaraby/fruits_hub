@@ -8,6 +8,7 @@ import 'package:fruits_hub/core/utils/app_images.dart';
 import 'package:fruits_hub/core/utils/app_text_styles.dart';
 import 'package:fruits_hub/core/widgets/custom_cached_network_image.dart';
 import 'package:fruits_hub/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
+import 'package:fruits_hub/generated/l10n.dart';
 
 class FruitItem extends StatelessWidget {
   const FruitItem({super.key, required this.productEntity});
@@ -16,6 +17,7 @@ class FruitItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var locale = S.of(context);
     return Container(
       height: 400.h,
       width: 200.w,
@@ -56,7 +58,8 @@ class FruitItem extends StatelessWidget {
                               TextSpan(
                                 children: [
                                   TextSpan(
-                                    text: '${productEntity.price}جنية',
+                                    text:
+                                        '${productEntity.price} ${locale.egPound}',
                                     style: TextStyles.bold13.copyWith(
                                       color: AppColors.colorF4A91F,
                                       fontSize: 13.sp,
@@ -70,7 +73,9 @@ class FruitItem extends StatelessWidget {
                                     ),
                                   ),
                                   TextSpan(
-                                    text: ' ${productEntity.unitAmount} كيلو',
+                                    text: locale.weightInKilos(
+                                      productEntity.unitAmount,
+                                    ),
                                     style: TextStyles.semibold13.copyWith(
                                       color: AppColors.colorF8C76D,
                                       fontSize: 13.sp,
