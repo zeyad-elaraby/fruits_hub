@@ -1,4 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/utils/app_images.dart';
+import 'package:fruits_hub/generated/l10n.dart';
 
 class BottomNavigationEntity {
   BottomNavigationEntity({
@@ -11,25 +13,27 @@ class BottomNavigationEntity {
   final String label;
 }
 
-List<BottomNavigationEntity> bottomNavigationBarItems = [
-  BottomNavigationEntity(
-    activeIcon: Assets.imagesIconsBoldHome,
-    inactiveIcon: Assets.imagesIconsOutlinedHome,
-    label: 'الرئيسية',
-  ),
-  BottomNavigationEntity(
-    activeIcon: Assets.imagesIconsBoldProducts,
-    inactiveIcon: Assets.imagesIconsOutlinedProducts,
-    label: 'المنتجات',
-  ),
-  BottomNavigationEntity(
-    activeIcon: Assets.imagesIconsBoldShoppingCart,
-    inactiveIcon: Assets.imagesIconsOutlinedShoppingCart,
-    label: 'سلة التسوق',
-  ),
-  BottomNavigationEntity(
-    activeIcon: Assets.imagesIconsBoldUser,
-    inactiveIcon: Assets.imagesIconsOutlinedUser,
-    label: 'حسابي',
-  ),
-];
+List<BottomNavigationEntity> getBottomNavigationBarItems(BuildContext context) {
+  return [
+    BottomNavigationEntity(
+      activeIcon: Assets.imagesIconsBoldHome,
+      inactiveIcon: Assets.imagesIconsOutlinedHome,
+      label: S.of(context).home,
+    ),
+    BottomNavigationEntity(
+      activeIcon: Assets.imagesIconsBoldProducts,
+      inactiveIcon: Assets.imagesIconsOutlinedProducts,
+      label: S.of(context).products,
+    ),
+    BottomNavigationEntity(
+      activeIcon: Assets.imagesIconsBoldShoppingCart,
+      inactiveIcon: Assets.imagesIconsOutlinedShoppingCart,
+      label: S.of(context).shoppingCart,
+    ),
+    BottomNavigationEntity(
+      activeIcon: Assets.imagesIconsBoldUser,
+      inactiveIcon: Assets.imagesIconsOutlinedUser,
+      label: S.of(context).myAccount,
+    ),
+  ];
+}

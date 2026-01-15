@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/utils/app_text_styles.dart';
 
-class CustomAuthAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAuthAppBar({super.key, required this.title});
+class SecondaryAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const SecondaryAppBar({super.key, required this.title});
   final String title;
   @override
   Widget build(BuildContext context) {

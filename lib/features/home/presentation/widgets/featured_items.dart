@@ -5,6 +5,7 @@ import 'package:fruits_hub/core/utils/app_colors.dart';
 import 'package:fruits_hub/core/utils/app_images.dart';
 import 'package:fruits_hub/core/utils/app_text_styles.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
+import 'package:fruits_hub/generated/l10n.dart';
 
 class FeaturedItem extends StatelessWidget {
   const FeaturedItem({super.key});
@@ -27,12 +28,12 @@ class FeaturedItem extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: Svg(Assets.imagesFeaturedItemBackground),
-
+                    matchTextDirection: true,
                     fit: BoxFit.fill,
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.only(right: 25.w),
+                  padding: EdgeInsetsDirectional.only(start: 25.w),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -60,7 +61,7 @@ class FeaturedItem extends StatelessWidget {
 
                           backGroundColor: AppColors.whiteColor,
                           radius: 4.r,
-                          title: 'تسوق الان',
+                          title: S.of(context).shopNow,
                           textStyle: TextStyles.semibold13.copyWith(
                             color: AppColors.primaryColor,
                           ),

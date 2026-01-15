@@ -7,7 +7,7 @@ class Prefs {
   }
 
   static Future<void> setBool(String key, bool value) async {
-   await _instance.setBool(key, value);
+    await _instance.setBool(key, value);
   }
 
   static bool? getBool(String key) {
@@ -15,7 +15,7 @@ class Prefs {
   }
 
   static Future<void> setString(String key, String value) async {
-   await _instance.setString(key, value);
+    await _instance.setString(key, value);
   }
 
   static String? getString(String key) {

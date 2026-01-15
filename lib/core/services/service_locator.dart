@@ -9,6 +9,9 @@ import 'package:fruits_hub/features/authentication/domain/repository/base_auth_r
 import 'package:fruits_hub/features/authentication/presentation/cubits/signin_cubit/cubit/signin_cubit.dart';
 import 'package:fruits_hub/features/authentication/presentation/cubits/signup_cubit/signup_cubit.dart';
 import 'package:fruits_hub/features/cart/presentation/cubits/cart_cubit/cart_cubit.dart';
+import 'package:fruits_hub/features/checkout/data/models/repository/orders_repository.dart';
+import 'package:fruits_hub/features/checkout/domain/repository/base_orders_repository.dart';
+import 'package:fruits_hub/features/checkout/presentation/cubit/checkout_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 final sl = GetIt.instance;
@@ -20,6 +23,7 @@ class ServiceLocator {
     sl.registerFactory(() => SigninCubit(sl()));
     sl.registerFactory(() => ProductsCubit(sl()));
     sl.registerFactory(() => CartCubit());
+    sl.registerFactory(() => CheckoutCubit(sl()));
 
     //REPOSITORY
     sl.registerLazySingleton<BaseAuthRepository>(
@@ -27,6 +31,9 @@ class ServiceLocator {
     );
     sl.registerLazySingleton<BaseProductsRepository>(
       () => ProductsRepository(sl()),
+    );
+    sl.registerLazySingleton<BaseOrdersRepository>(
+      () => OrdersRepository(sl()),
     );
 
     //services
