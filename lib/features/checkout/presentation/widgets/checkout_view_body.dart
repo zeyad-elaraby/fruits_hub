@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruits_hub/core/helper_functions/route_manager/app_routes.dart';
 import 'package:fruits_hub/core/utils/app_keys.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/core/widgets/custom_snack_bar.dart';
@@ -194,7 +195,7 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
           onSuccess: (Map params) async {
             print("onSuccess: $params");
             checkoutCubit.addOrder(orderEntity: orderEntity);
-            Navigator.pop(context);
+            Navigator.pushNamed(context, AppRoutes.mainView);
           },
           onError: (error) {
             print("onError: $error");

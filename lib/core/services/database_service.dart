@@ -4,7 +4,7 @@ abstract class DatabaseService {
   Future<void> addData({
     required String path,
     required Map<String, dynamic> data,
-    String? uId,
+    String? docId,
   });
   Future<dynamic> getData({
     required String path,

@@ -14,6 +14,7 @@ class OrdersRepository implements BaseOrdersRepository {
     try {
       await databaseService.addData(
         path: BackendEndpoints.addOrder,
+        docId: orderEntity.orderId,
         data: OrderModel.fromEntity(orderEntity).toJson(),
       );
       return const Right(null);

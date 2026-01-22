@@ -153,7 +153,7 @@ class AuthRepository extends BaseAuthRepository {
     return await databaseService.addData(
       path: BackendEndpoints.addUserData,
       data: userModel.toJson(),
-      uId: user.uId,
+      docId: user.uId,
     );
   }
 

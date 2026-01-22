@@ -32,7 +32,7 @@ class OrderModel {
           .map((e) => OrderProductModel.fromEntity(e))
           .toList(),
       paymentMethod: entity.payWithCash == true ? "Cash" : "Paypal",
-      orderId: const Uuid().v4(),
+      orderId: entity.orderId,
     );
   }
 

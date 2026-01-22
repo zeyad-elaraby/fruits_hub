@@ -11,6 +11,7 @@ import 'package:fruits_hub/features/checkout/presentation/widgets/checkout_cubit
 import 'package:fruits_hub/features/checkout/presentation/widgets/checkout_view_body.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 import 'package:provider/provider.dart';
+import 'package:uuid/uuid.dart';
 
 class CheckoutView extends StatefulWidget {
   const CheckoutView({super.key, required this.cartEntity});
@@ -26,6 +27,7 @@ class _CheckoutViewState extends State<CheckoutView> {
   void initState() {
     orderEntity = OrderEntity(
       uId: getUserData().uId,
+      orderId: const Uuid().v4(),
       cartEntity: widget.cartEntity,
       shippingAddress: ShippingAddressEntity(),
     );
