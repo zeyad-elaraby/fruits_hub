@@ -20,15 +20,72 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
+  static String m0(amount) => "الدفع ${amount} جنيه";
+
+  static String m1(count) => "لديك ${count} منتجات في سلة التسوق";
+
+  static String m2(value) => "${value} كيلو";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "address": MessageLookupByLibrary.simpleMessage("العنوان"),
+    "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
+    "cart": MessageLookupByLibrary.simpleMessage("السلة"),
+    "cashOnDelivery": MessageLookupByLibrary.simpleMessage(
+      "الدفع عند الاستلام",
+    ),
+    "city": MessageLookupByLibrary.simpleMessage("المدينة"),
+    "confirm_order_prompt": MessageLookupByLibrary.simpleMessage(
+      "يرجي تأكيد طلبك",
+    ),
     "createAccount": MessageLookupByLibrary.simpleMessage("قم بانشاء حساب"),
+    "createNewAccount": MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
+    "delivery": MessageLookupByLibrary.simpleMessage("التوصيل"),
+    "delivery_address": MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
+    "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
+    "egPound": MessageLookupByLibrary.simpleMessage("جنيه"),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "error": MessageLookupByLibrary.simpleMessage("خطأ"),
+    "floor": MessageLookupByLibrary.simpleMessage("رقم الطابق , رقم الشقه .."),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "fullName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
+    "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
+    "haveAccount": MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
+    "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+    "more": MessageLookupByLibrary.simpleMessage("المزيد"),
+    "myAccount": MessageLookupByLibrary.simpleMessage("حسابي"),
+    "newAccount": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+    "next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "onlinePayment": MessageLookupByLibrary.simpleMessage("الدفع أونلاين"),
     "or": MessageLookupByLibrary.simpleMessage("او"),
+    "orderAddedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم إضافة الطلب بنجاح",
+    ),
+    "order_summary": MessageLookupByLibrary.simpleMessage("ملخص الطلب"),
+    "paayWithPaypal": MessageLookupByLibrary.simpleMessage(
+      "الدفع بواسطة paypal",
+    ),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "payButtonLabel": m0,
+    "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+    "payment_method": MessageLookupByLibrary.simpleMessage("وسيلة الدفع"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+    "pickupFromLocation": MessageLookupByLibrary.simpleMessage(
+      "التسليم من المكان",
+    ),
+    "pleaseSelectPaymentMethod": MessageLookupByLibrary.simpleMessage(
+      "يرجى تحديد طريقة الدفع",
+    ),
+    "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
+    "productsInCart": m1,
+    "results": MessageLookupByLibrary.simpleMessage("نتائج"),
+    "review": MessageLookupByLibrary.simpleMessage("المراجعة"),
+    "searchAbout": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
+    "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
+    "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الآن"),
+    "shoppingCart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
     "signInWithApple": MessageLookupByLibrary.simpleMessage("تسجيل بواسطة ابل"),
     "signInWithFacebook": MessageLookupByLibrary.simpleMessage(
       "تسجيل بواسطة فيسبوك",
@@ -36,5 +93,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "signInWithGoogle": MessageLookupByLibrary.simpleMessage(
       "تسجيل بواسطة جوجل",
     ),
+    "subtotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
+    "success": MessageLookupByLibrary.simpleMessage("نجاح"),
+    "termsAndConditionsPrefix": MessageLookupByLibrary.simpleMessage(
+      "من خلال إنشاء حساب ، فإنك توافق على",
+    ),
+    "termsAndConditionsSuffix": MessageLookupByLibrary.simpleMessage(
+      "الشروط والأحكام الخاصة بنا",
+    ),
+    "total": MessageLookupByLibrary.simpleMessage("الكلي"),
+    "warning": MessageLookupByLibrary.simpleMessage("تنبيه"),
+    "weightInKilos": m2,
   };
 }
