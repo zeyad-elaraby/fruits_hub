@@ -49,6 +49,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "error": MessageLookupByLibrary.simpleMessage("خطأ"),
     "floor": MessageLookupByLibrary.simpleMessage("رقم الطابق , رقم الشقه .."),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "forgotPasswordEmailDescription": MessageLookupByLibrary.simpleMessage(
+      "لا تقلق ، ما عليك سوى كتابة البريد الالكتروني وسنرسل رابط تعيين كلمه المرور.",
+    ),
+    "forgotThePassword": MessageLookupByLibrary.simpleMessage(
+      "نسيان كلمة المرور",
+    ),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
     "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
     "haveAccount": MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
@@ -83,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("نتائج"),
     "review": MessageLookupByLibrary.simpleMessage("المراجعة"),
     "searchAbout": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
+    "sendTheLink": MessageLookupByLibrary.simpleMessage("ارسل الرابط"),
     "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
     "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الآن"),
     "shoppingCart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
@@ -102,6 +109,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "الشروط والأحكام الخاصة بنا",
     ),
     "total": MessageLookupByLibrary.simpleMessage("الكلي"),
+    "verificationEmailSentSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم إرسال بريد التحقق بنجاح",
+    ),
     "warning": MessageLookupByLibrary.simpleMessage("تنبيه"),
     "weightInKilos": m2,
   };

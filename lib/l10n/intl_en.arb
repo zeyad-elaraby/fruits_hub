@@ -54,6 +54,10 @@
 "shoppingCart": "Shopping Cart",
 "home": "Home",
 "productsInCart": "You have {count} products in the shopping cart",
-"shopNow": "Shop Now"
+"shopNow": "Shop Now",
+"forgotThePassword": "Forgot Password",
+"forgotPasswordEmailDescription": "Don't worry, just enter your email and we'll send a reset password link.",
+"sendTheLink": "Send The Link",
+"verificationEmailSentSuccessfully": "Verification email sent successfully"
 
 }
