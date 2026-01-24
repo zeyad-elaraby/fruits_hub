@@ -56,7 +56,9 @@ class _SigninViewBodyState extends State<SigninViewBody> {
             Padding(
               padding: EdgeInsetsDirectional.only(top: 16.h, bottom: 33.h),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, AppRoutes.forgetPasswordView);
+                },
                 child: Text(
                   local.forgotPassword,
                   style: TextStyles.semibold13.copyWith(

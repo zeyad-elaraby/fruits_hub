@@ -478,6 +478,46 @@ class S {
   String get shopNow {
     return Intl.message('Shop Now', name: 'shopNow', desc: '', args: []);
   }
+
+  /// `Forgot Password`
+  String get forgotThePassword {
+    return Intl.message(
+      'Forgot Password',
+      name: 'forgotThePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't worry, just enter your email and we'll send a reset password link.`
+  String get forgotPasswordEmailDescription {
+    return Intl.message(
+      'Don\'t worry, just enter your email and we\'ll send a reset password link.',
+      name: 'forgotPasswordEmailDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send The Link`
+  String get sendTheLink {
+    return Intl.message(
+      'Send The Link',
+      name: 'sendTheLink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification email sent successfully`
+  String get verificationEmailSentSuccessfully {
+    return Intl.message(
+      'Verification email sent successfully',
+      name: 'verificationEmailSentSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

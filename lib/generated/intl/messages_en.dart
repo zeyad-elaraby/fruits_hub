@@ -55,6 +55,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "Floor Number , Apartment Number ..",
     ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+    "forgotPasswordEmailDescription": MessageLookupByLibrary.simpleMessage(
+      "Don\'t worry, just enter your email and we\'ll send a reset password link.",
+    ),
+    "forgotThePassword": MessageLookupByLibrary.simpleMessage(
+      "Forgot Password",
+    ),
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
     "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning !.."),
     "haveAccount": MessageLookupByLibrary.simpleMessage(
@@ -89,6 +95,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("Results"),
     "review": MessageLookupByLibrary.simpleMessage("Review"),
     "searchAbout": MessageLookupByLibrary.simpleMessage("Search about......."),
+    "sendTheLink": MessageLookupByLibrary.simpleMessage("Send The Link"),
     "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
     "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
     "shoppingCart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
@@ -110,6 +117,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "our Terms and Conditions",
     ),
     "total": MessageLookupByLibrary.simpleMessage("Total"),
+    "verificationEmailSentSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Verification email sent successfully",
+    ),
     "warning": MessageLookupByLibrary.simpleMessage("Warning"),
     "weightInKilos": m2,
   };

@@ -49,7 +49,7 @@ class FriutsHub extends StatelessWidget {
             scaffoldBackgroundColor: AppColors.whiteColor,
             appBarTheme: AppBarTheme(backgroundColor: AppColors.whiteColor),
           ),
-          locale: const Locale('en'),
+          locale: const Locale('ar'),
           localizationsDelegates: [
             S.delegate,
             GlobalMaterialLocalizations.delegate,

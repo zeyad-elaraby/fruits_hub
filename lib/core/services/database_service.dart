@@ -13,6 +13,7 @@ abstract class DatabaseService {
   });
   Future<bool> checkIfDataExists({
     required String path,
-    required String documentId,
+    String? documentId,
+    Map<String, dynamic>? query,
   });
 }

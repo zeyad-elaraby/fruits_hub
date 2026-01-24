@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/helper_functions/route_manager/app_routes.dart';
+import 'package:fruits_hub/features/authentication/presentation/views/forget_password_view.dart';
 import 'package:fruits_hub/features/authentication/presentation/views/signin_view.dart';
 import 'package:fruits_hub/features/authentication/presentation/views/signup_view.dart';
 import 'package:fruits_hub/features/cart/domain/cart_entity.dart';
@@ -28,6 +29,8 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
         builder: (context) =>
             CheckoutView(cartEntity: settings.arguments as CartEntity),
       );
+    case AppRoutes.forgetPasswordView:
+      return MaterialPageRoute(builder: (context) => ForgetPasswordView());
     default:
       return MaterialPageRoute(
         builder: (context) =>

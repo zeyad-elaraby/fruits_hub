@@ -1,14 +1,10 @@
-import 'dart:convert';
 import 'dart:developer';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruits_hub/core/errors/exceptions.dart';
 import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_hub/core/utils/constants.dart';
-import 'package:fruits_hub/features/authentication/data/models/user_model.dart';
-import 'package:fruits_hub/features/authentication/domain/entities/user_entity.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseAuthService {
@@ -119,6 +115,10 @@ class FirebaseAuthService {
     return (await FirebaseAuth.instance.signInWithCredential(
       facebookAuthCredential,
     )).user!;
+  }
+
+  Future<void> forgetPassord(String email) async {
+    await _auth.sendPasswordResetEmail(email: email);
   }
 
   bool isLoggedIn() {
