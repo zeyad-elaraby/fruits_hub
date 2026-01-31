@@ -143,6 +143,26 @@ class AuthRepository extends BaseAuthRepository {
   }
 
   @override
+  Future<Either<Failure, void>> forgetPassword(String email) async {
+    try {
+      bool userExists = await databaseService.checkIfDataExists(
+        path: BackendEndpoints.checkIfUserExists,
+        query: {'email': email},
+      );
+      if (userExists) {
+        log("userExists");
+        await firebaseAuthService.forgetPassord(email);
+        return right(null);
+      } else {
+        log("user not Exists");
+        return left(ServerFailure('User not found'));
+      }
+    } catch (e) {
+      return left(ServerFailure(e.toString()));
+    }
+  }
+
+  @override
   Future addUserData(UserEntity user) async {
     UserModel userModel = UserModel(
       uId: user.uId,

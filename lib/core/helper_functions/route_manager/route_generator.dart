@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/helper_functions/route_manager/app_routes.dart';
+import 'package:fruits_hub/features/authentication/presentation/views/forget_password_view.dart';
 import 'package:fruits_hub/features/authentication/presentation/views/signin_view.dart';
 import 'package:fruits_hub/features/authentication/presentation/views/signup_view.dart';
 import 'package:fruits_hub/features/cart/domain/cart_entity.dart';
@@ -7,6 +8,7 @@ import 'package:fruits_hub/features/checkout/presentation/views/checkout_view.da
 import 'package:fruits_hub/features/home/presentation/views/best_selling_view.dart';
 import 'package:fruits_hub/features/layout/presentation/views/main_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
+import 'package:fruits_hub/features/search/presentation/views/search_view.dart';
 import 'package:fruits_hub/features/splash/presentation/views/splash_view.dart';
 
 Route<dynamic> onGenerateRoutes(RouteSettings settings) {
@@ -28,6 +30,10 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
         builder: (context) =>
             CheckoutView(cartEntity: settings.arguments as CartEntity),
       );
+    case AppRoutes.forgetPasswordView:
+      return MaterialPageRoute(builder: (context) => ForgetPasswordView());
+    case AppRoutes.searchView:
+      return MaterialPageRoute(builder: (context) => SearchView());
     default:
       return MaterialPageRoute(
         builder: (context) =>

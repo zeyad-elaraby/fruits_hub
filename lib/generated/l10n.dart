@@ -478,6 +478,81 @@ class S {
   String get shopNow {
     return Intl.message('Shop Now', name: 'shopNow', desc: '', args: []);
   }
+
+  /// `Forgot Password`
+  String get forgotThePassword {
+    return Intl.message(
+      'Forgot Password',
+      name: 'forgotThePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't worry, just enter your email and we'll send a reset password link.`
+  String get forgotPasswordEmailDescription {
+    return Intl.message(
+      'Don\'t worry, just enter your email and we\'ll send a reset password link.',
+      name: 'forgotPasswordEmailDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send The Link`
+  String get sendTheLink {
+    return Intl.message(
+      'Send The Link',
+      name: 'sendTheLink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification email sent successfully`
+  String get verificationEmailSentSuccessfully {
+    return Intl.message(
+      'Verification email sent successfully',
+      name: 'verificationEmailSentSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message('Search', name: 'search', desc: '', args: []);
+  }
+
+  /// `Sorry... this information is not available at the moment`
+  String get infoNotAvailable {
+    return Intl.message(
+      'Sorry... this information is not available at the moment',
+      name: 'infoNotAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start search for products`
+  String get startSearchForProducts {
+    return Intl.message(
+      'Start search for products',
+      name: 'startSearchForProducts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong`
+  String get somethingWentWrong {
+    return Intl.message(
+      'Something went wrong',
+      name: 'somethingWentWrong',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

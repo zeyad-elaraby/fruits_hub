@@ -1,3 +1,4 @@
+import 'package:fruits_hub/core/data/models/product_model.dart';
 import 'package:fruits_hub/features/authentication/domain/entities/user_entity.dart';
 
 abstract class DatabaseService {
@@ -13,6 +14,7 @@ abstract class DatabaseService {
   });
   Future<bool> checkIfDataExists({
     required String path,
-    required String documentId,
+    String? documentId,
+    Map<String, dynamic>? query,
   });
 }

@@ -7,7 +7,7 @@ import 'package:fruits_hub/core/utils/app_text_styles.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
 class SearchTextField extends StatefulWidget {
-  SearchTextField({
+  const SearchTextField({
     super.key,
     this.borderRadius,
     this.fillColor,
@@ -22,6 +22,9 @@ class SearchTextField extends StatefulWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.hintStyle,
+    this.enabled,
+    this.onChanged,
+    this.onSaved,
   });
   final double? borderRadius;
   final Color? fillColor;
@@ -36,6 +39,9 @@ class SearchTextField extends StatefulWidget {
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final TextStyle? hintStyle;
+  final bool? enabled;
+  final void Function(String)? onChanged;
+  final void Function(String?)? onSaved;
 
   @override
   State<SearchTextField> createState() => _SearchTextFieldState();
@@ -58,7 +64,9 @@ class _SearchTextFieldState extends State<SearchTextField> {
       ),
       child: TextFormField(
         validator: widget.validator,
-
+        enabled: widget.enabled,
+        onChanged: widget.onChanged,
+        onSaved: widget.onSaved,
         readOnly: widget.readOnly,
         style: TextStyles.bold13.copyWith(color: AppColors.color949D9E),
         maxLines: widget.maxLines ?? 1,
@@ -90,6 +98,11 @@ class _SearchTextFieldState extends State<SearchTextField> {
               TextStyles.regular13.copyWith(color: AppColors.color949D9E),
           fillColor: widget.fillColor ?? AppColors.whiteColor,
           filled: true,
+          disabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: widget.borderColor ?? AppColors.whiteColor,
+            ),
+          ),
           border: OutlineInputBorder(
             borderSide: BorderSide(
               color: widget.borderColor ?? AppColors.whiteColor,

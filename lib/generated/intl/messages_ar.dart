@@ -49,10 +49,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "error": MessageLookupByLibrary.simpleMessage("خطأ"),
     "floor": MessageLookupByLibrary.simpleMessage("رقم الطابق , رقم الشقه .."),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "forgotPasswordEmailDescription": MessageLookupByLibrary.simpleMessage(
+      "لا تقلق ، ما عليك سوى كتابة البريد الالكتروني وسنرسل رابط تعيين كلمه المرور.",
+    ),
+    "forgotThePassword": MessageLookupByLibrary.simpleMessage(
+      "نسيان كلمة المرور",
+    ),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
     "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
     "haveAccount": MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "infoNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "عفوًا... هذه المعلومات غير متوفرة للحظة",
+    ),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "more": MessageLookupByLibrary.simpleMessage("المزيد"),
     "myAccount": MessageLookupByLibrary.simpleMessage("حسابي"),
@@ -82,7 +91,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "productsInCart": m1,
     "results": MessageLookupByLibrary.simpleMessage("نتائج"),
     "review": MessageLookupByLibrary.simpleMessage("المراجعة"),
+    "search": MessageLookupByLibrary.simpleMessage("البحث"),
     "searchAbout": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
+    "sendTheLink": MessageLookupByLibrary.simpleMessage("ارسل الرابط"),
     "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
     "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الآن"),
     "shoppingCart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
@@ -93,6 +104,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "signInWithGoogle": MessageLookupByLibrary.simpleMessage(
       "تسجيل بواسطة جوجل",
     ),
+    "somethingWentWrong": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
+    "startSearchForProducts": MessageLookupByLibrary.simpleMessage(
+      "ابدأ البحث عن المنتجات",
+    ),
     "subtotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
     "success": MessageLookupByLibrary.simpleMessage("نجاح"),
     "termsAndConditionsPrefix": MessageLookupByLibrary.simpleMessage(
@@ -102,6 +117,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "الشروط والأحكام الخاصة بنا",
     ),
     "total": MessageLookupByLibrary.simpleMessage("الكلي"),
+    "verificationEmailSentSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم إرسال بريد التحقق بنجاح",
+    ),
     "warning": MessageLookupByLibrary.simpleMessage("تنبيه"),
     "weightInKilos": m2,
   };

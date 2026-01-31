@@ -55,12 +55,21 @@ class MessageLookup extends MessageLookupByLibrary {
       "Floor Number , Apartment Number ..",
     ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+    "forgotPasswordEmailDescription": MessageLookupByLibrary.simpleMessage(
+      "Don\'t worry, just enter your email and we\'ll send a reset password link.",
+    ),
+    "forgotThePassword": MessageLookupByLibrary.simpleMessage(
+      "Forgot Password",
+    ),
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
     "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning !.."),
     "haveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account?",
     ),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
+    "infoNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "Sorry... this information is not available at the moment",
+    ),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "more": MessageLookupByLibrary.simpleMessage("More"),
     "myAccount": MessageLookupByLibrary.simpleMessage("My Account"),
@@ -88,7 +97,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "productsInCart": m1,
     "results": MessageLookupByLibrary.simpleMessage("Results"),
     "review": MessageLookupByLibrary.simpleMessage("Review"),
+    "search": MessageLookupByLibrary.simpleMessage("Search"),
     "searchAbout": MessageLookupByLibrary.simpleMessage("Search about......."),
+    "sendTheLink": MessageLookupByLibrary.simpleMessage("Send The Link"),
     "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
     "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
     "shoppingCart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
@@ -101,6 +112,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "signInWithGoogle": MessageLookupByLibrary.simpleMessage(
       "Sign in with Google",
     ),
+    "somethingWentWrong": MessageLookupByLibrary.simpleMessage(
+      "Something went wrong",
+    ),
+    "startSearchForProducts": MessageLookupByLibrary.simpleMessage(
+      "Start search for products",
+    ),
     "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
     "success": MessageLookupByLibrary.simpleMessage("Success"),
     "termsAndConditionsPrefix": MessageLookupByLibrary.simpleMessage(
@@ -110,6 +127,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "our Terms and Conditions",
     ),
     "total": MessageLookupByLibrary.simpleMessage("Total"),
+    "verificationEmailSentSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Verification email sent successfully",
+    ),
     "warning": MessageLookupByLibrary.simpleMessage("Warning"),
     "weightInKilos": m2,
   };
