@@ -59,6 +59,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
     "haveAccount": MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "infoNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "عفوًا... هذه المعلومات غير متوفرة للحظة",
+    ),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "more": MessageLookupByLibrary.simpleMessage("المزيد"),
     "myAccount": MessageLookupByLibrary.simpleMessage("حسابي"),
@@ -88,6 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "productsInCart": m1,
     "results": MessageLookupByLibrary.simpleMessage("نتائج"),
     "review": MessageLookupByLibrary.simpleMessage("المراجعة"),
+    "search": MessageLookupByLibrary.simpleMessage("البحث"),
     "searchAbout": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
     "sendTheLink": MessageLookupByLibrary.simpleMessage("ارسل الرابط"),
     "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
@@ -99,6 +103,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "signInWithGoogle": MessageLookupByLibrary.simpleMessage(
       "تسجيل بواسطة جوجل",
+    ),
+    "somethingWentWrong": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
+    "startSearchForProducts": MessageLookupByLibrary.simpleMessage(
+      "ابدأ البحث عن المنتجات",
     ),
     "subtotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
     "success": MessageLookupByLibrary.simpleMessage("نجاح"),

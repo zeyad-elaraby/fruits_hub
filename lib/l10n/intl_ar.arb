@@ -58,5 +58,9 @@
 "forgotThePassword": "نسيان كلمة المرور",
 "forgotPasswordEmailDescription": "لا تقلق ، ما عليك سوى كتابة البريد الالكتروني وسنرسل رابط تعيين كلمه المرور.",
 "sendTheLink": "ارسل الرابط",
-"verificationEmailSentSuccessfully": "تم إرسال بريد التحقق بنجاح"
+"verificationEmailSentSuccessfully": "تم إرسال بريد التحقق بنجاح",
+"search":"البحث",
+"infoNotAvailable": "عفوًا... هذه المعلومات غير متوفرة للحظة",
+"startSearchForProducts": "ابدأ البحث عن المنتجات",
+"somethingWentWrong": "حدث خطأ ما"
 }

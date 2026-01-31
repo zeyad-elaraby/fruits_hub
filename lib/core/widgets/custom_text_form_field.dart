@@ -26,6 +26,7 @@ class CustomTextField extends StatefulWidget {
     this.focusNode,
     this.nextFocus,
     this.onSaved,
+    this.onChanged,
   });
   final String? label;
   final double? borderRadius;
@@ -45,6 +46,7 @@ class CustomTextField extends StatefulWidget {
   final FocusNode? focusNode;
   final FocusNode? nextFocus;
   final void Function(String?)? onSaved;
+  final void Function(String)? onChanged;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -75,6 +77,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           obscuringCharacter: '*',
           validator: widget.validator,
           onSaved: widget.onSaved,
+          onChanged: widget.onChanged,
           focusNode: widget.focusNode,
           onEditingComplete: () {
             widget.focusNode?.unfocus();

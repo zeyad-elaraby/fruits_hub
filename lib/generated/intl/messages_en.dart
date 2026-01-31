@@ -67,6 +67,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Already have an account?",
     ),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
+    "infoNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "Sorry... this information is not available at the moment",
+    ),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "more": MessageLookupByLibrary.simpleMessage("More"),
     "myAccount": MessageLookupByLibrary.simpleMessage("My Account"),
@@ -94,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "productsInCart": m1,
     "results": MessageLookupByLibrary.simpleMessage("Results"),
     "review": MessageLookupByLibrary.simpleMessage("Review"),
+    "search": MessageLookupByLibrary.simpleMessage("Search"),
     "searchAbout": MessageLookupByLibrary.simpleMessage("Search about......."),
     "sendTheLink": MessageLookupByLibrary.simpleMessage("Send The Link"),
     "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
@@ -107,6 +111,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "signInWithGoogle": MessageLookupByLibrary.simpleMessage(
       "Sign in with Google",
+    ),
+    "somethingWentWrong": MessageLookupByLibrary.simpleMessage(
+      "Something went wrong",
+    ),
+    "startSearchForProducts": MessageLookupByLibrary.simpleMessage(
+      "Start search for products",
     ),
     "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
     "success": MessageLookupByLibrary.simpleMessage("Success"),
