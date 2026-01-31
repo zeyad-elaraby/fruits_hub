@@ -1,3 +1,4 @@
+import 'package:fruits_hub/core/data/models/product_model.dart';
 import 'package:fruits_hub/features/authentication/domain/entities/user_entity.dart';
 
 abstract class DatabaseService {

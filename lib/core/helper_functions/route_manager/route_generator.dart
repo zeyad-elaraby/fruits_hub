@@ -8,6 +8,7 @@ import 'package:fruits_hub/features/checkout/presentation/views/checkout_view.da
 import 'package:fruits_hub/features/home/presentation/views/best_selling_view.dart';
 import 'package:fruits_hub/features/layout/presentation/views/main_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
+import 'package:fruits_hub/features/search/presentation/views/search_view.dart';
 import 'package:fruits_hub/features/splash/presentation/views/splash_view.dart';
 
 Route<dynamic> onGenerateRoutes(RouteSettings settings) {
@@ -31,6 +32,8 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
       );
     case AppRoutes.forgetPasswordView:
       return MaterialPageRoute(builder: (context) => ForgetPasswordView());
+    case AppRoutes.searchView:
+      return MaterialPageRoute(builder: (context) => SearchView());
     default:
       return MaterialPageRoute(
         builder: (context) =>

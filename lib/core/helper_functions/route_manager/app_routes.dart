@@ -7,4 +7,5 @@ class AppRoutes {
   static const String bestSellingView = 'best_selling_view';
   static const String checkoutScreen = 'checkout_screen';
   static const String forgetPasswordView = 'forget_password_view';
+  static const String searchView = 'search_view';
 }

@@ -518,6 +518,41 @@ class S {
       args: [],
     );
   }
+
+  /// `Search`
+  String get search {
+    return Intl.message('Search', name: 'search', desc: '', args: []);
+  }
+
+  /// `Sorry... this information is not available at the moment`
+  String get infoNotAvailable {
+    return Intl.message(
+      'Sorry... this information is not available at the moment',
+      name: 'infoNotAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start search for products`
+  String get startSearchForProducts {
+    return Intl.message(
+      'Start search for products',
+      name: 'startSearchForProducts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong`
+  String get somethingWentWrong {
+    return Intl.message(
+      'Something went wrong',
+      name: 'somethingWentWrong',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
